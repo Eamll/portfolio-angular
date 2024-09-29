@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BadgeModule } from 'primeng/badge';
+import { AvatarModule } from 'primeng/avatar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule,
     MenubarModule,
-    InputTextModule
+    InputTextModule,
+    BadgeModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

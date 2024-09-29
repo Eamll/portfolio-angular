@@ -1,0 +1,39 @@
+@import "primeng/resources/primeng.css";
+
+$primaryColor: #610094;
+$primaryLightColor: #3F0071;
+$primaryDarkColor: #150050;
+$primaryDarkerColor: #000000;
+$primaryTextColor: #ffffff;
+
+$highlightBg: $primaryColor;
+$highlightTextColor: $primaryTextColor;
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+
+.p-component {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.p-component-overlay {
+    background-color: rgba($primaryDarkerColor, 0.4);
+}
+
+.p-highlight {
+    background: $highlightBg;
+    color: $highlightTextColor;
+}
+
+.pi {
+    font-size: 1rem;
+}
+
+.p-link {
+    font-size: 1rem;
+    font-family: var(--font-family);
+    border-radius: 3px;
+}
+
+// You can add more custom styles here as needed
