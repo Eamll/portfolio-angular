@@ -1,39 +1,90 @@
 @import "primeng/resources/primeng.css";
 
-$primaryColor: #610094;
-$primaryLightColor: #3F0071;
-$primaryDarkColor: #150050;
-$primaryDarkerColor: #000000;
-$primaryTextColor: #ffffff;
+// Custom color palette
+$color1: #000000;
+$color2: #150050;
+$color3: #3F0071;
+$color4: #610094;
 
-$highlightBg: $primaryColor;
-$highlightTextColor: $primaryTextColor;
+// Override PrimeNG theme variables
+:root {
+    --surface-a: #{$color1};
+    --surface-b: #{$color2};
+    --surface-c: #{$color3};
+    --surface-d: #{$color4};
+    --surface-e: #{$color1};
+    --surface-f: #{$color1};
+    --text-color: #{$color4};
+    --text-color-secondary: #{$color3};
+    --primary-color: #{$color4};
+    --primary-color-text: #{$color4};
+    --font-family: 'Source Code Pro', monospace;
+}
 
+// Import the base theme (after overriding variables)
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 
-.p-component {
-    font-family: var(--font-family);
-    font-size: 1rem;
-    font-weight: normal;
+// Custom styles
+body {
+    background-color: var(--surface-a);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
-.p-component-overlay {
-    background-color: rgba($primaryDarkerColor, 0.4);
-}
+.p-menubar {
+    background: $color2;
+    border: none;
 
-.p-highlight {
-    background: $highlightBg;
-    color: $highlightTextColor;
-}
+    .p-menubar-root-list {
+        > .p-menuitem {
+            > .p-menuitem-link {
+                color: $color4;
 
-.pi {
-    font-size: 1rem;
-}
+                .p-menuitem-text, .p-menuitem-icon {
+                    color: $color4;
+                }
 
-.p-link {
-    font-size: 1rem;
-    font-family: var(--font-family);
-    border-radius: 3px;
-}
+                &:not(.p-disabled):hover {
+                    background: $color3;
 
-// You can add more custom styles here as needed
+                    .p-menuitem-text, .p-menuitem-icon {
+                        color: $color4; // This ensures the text color remains color4 on hover
+                    }
+                }
+            }
+
+            &.p-highlight > .p-menuitem-link {
+                background: $color3;
+
+                .p-menuitem-text, .p-menuitem-icon {
+                    color: $color4; // This ensures the text color remains color4 when highlighted
+                }
+            }
+        }
+    }
+
+    // Add these styles for submenu items
+    .p-submenu-list {
+        background: $color2;
+        border: 1px solid $color3;
+
+        .p-menuitem {
+            .p-menuitem-link {
+                color: $color4;
+
+                .p-menuitem-text, .p-menuitem-icon {
+                    color: $color4;
+                }
+
+                &:not(.p-disabled):hover {
+                    background: $color3;
+
+                    .p-menuitem-text, .p-menuitem-icon {
+                        color: $color4; // This ensures the text color remains color4 on hover for submenu items
+                    }
+                }
+            }
+        }
+    }
+}

@@ -12,22 +12,22 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Home',
+        label: 'HOME',
         icon: 'pi pi-fw pi-home',
         routerLink: ['/']
       },
       {
-        label: 'About',
+        label: 'ABOUT',
         icon: 'pi pi-fw pi-info-circle',
         routerLink: ['/about']
       },
       {
-        label: 'Projects',
+        label: 'PROJECTS',
         icon: 'pi pi-fw pi-briefcase',
         routerLink: ['/projects']
       },
       {
-        label: 'Contact',
+        label: 'CONTACT',
         icon: 'pi pi-fw pi-envelope',
         routerLink: ['/contact']
       }

@@ -4,5 +4,19 @@
   --primary-light-color: #3F0071;
   --primary-dark-color: #150050;
   --primary-darker-color: #000000;
-  --primary-text-color: #ffffff;
+  font-family: 'Source Code Pro', monospace;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('assets/fonts/SourceCodePro-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
 }
